@@ -14,7 +14,7 @@ const useEarthquakeData = () => {
         );
         setEarthquakes(res.data.features);
       } catch (err) {
-        setError("Failed to load data", err);
+        setError(`Failed to load data: ${err.message}`);
       } finally {
         setLoading(false);
       }
